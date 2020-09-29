@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+.heading{
+    background-color:#eeeeee;
+    padding:25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type=text] {
+    width: 200px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('search.png');
+  background-size: 20px;
+  opacity: 0.7;
+  background-position: 10px 12px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  margin-left:1px;
+  margin-bottom:15px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+.list:hover{
+    background-color: #cccccc;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 100%;
+}
+.btn {
+  position: absolute;
+  top:50%;
+  margin-left:10px;
+  left: 3%;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #eeeeee;
+  color: black;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+
+</style>
+<body>
+
+
+<div class="text-center heading">
+  <h2>Fire detection Using Satellite Images</h2>
+  
+</div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Fire Detection</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Options</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+<div class="container-fluid">
+   
+  
+    <div class="row">
+        <div class="col-sm-3 my-0" id="side" style="height:500px;width:20%;display: none;">
+            <input type="text" name="search" placeholder="Search..">
+            <ul class="list-group">
+                <li class="list-group-item list">First item</li>
+                <li class="list-group-item list">Second item</li>
+                <li class="list-group-item list">Third item</li>
+                <li class="list-group-item list">First item</li>
+                <li class="list-group-item list">Second item</li>
+                <li class="list-group-item list">Third item</li>
+              </ul>
+           
+        </div>
+        <div class="col-sm-9 container" id="map" style="display:inline-block;height: 500px;width:100%">
+            
+          <img src="map.png " style="width:100%"/>
+          <button onclick="myFunction()" class="btn">
+            <img src="arrow.png" style="width:20px">
+        </button>
+        </div>
+      </div>
+</div>
+<script>
+    function myFunction() {
+  var x = document.getElementById("side");
+  var y = document.getElementById("map");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.width = "80%";
+  } else {
+    x.style.display = "none";
+    y.style.width = "100%";
+  }
+}
+</script>
+
+</body>
+</html>
